@@ -1,15 +1,24 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Home from '@/components/Home'
+import DbMissionList from '@/components/missiondb/dbmissionlist'
+import test from '@/test'
 
 Vue.use(Router)
 
+const routes = [
+	{
+		path: '/',
+		name: 'Home',
+		component: Home
+	},
+	{
+		path: '/dbrw',
+		name: 'dbrw',
+		component: DbMissionList
+	}
+]
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    }
-  ]
+	mode: 'history',
+	routes
 })

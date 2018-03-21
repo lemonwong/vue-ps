@@ -44,7 +44,7 @@
 			},
 			showRightBtn: {
 				type: Boolean,
-				default: true
+				default: false
 			},
 			showMore: {
 				type: Boolean,

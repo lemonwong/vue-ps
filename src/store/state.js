@@ -1,5 +1,5 @@
 const state = {
-	url: 'http://localhost:369'
+  url: 'http://192.168.163.150:369'
 }
 
 export default state

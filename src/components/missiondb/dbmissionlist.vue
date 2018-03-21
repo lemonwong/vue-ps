@@ -1,7 +1,7 @@
 <template>
 	<div class="dblist-wrapper">
 		<div class="header-wrapper">
-			<x-header title="待办任务" @right-click="showFilter">
+			<x-header title="待办任务" @right-click="showFilter" :showRightBtn=true>
 				<span slot="right-icon" class="icon-prev"></span>
 			</x-header>
 		</div>
@@ -224,20 +224,20 @@
 <style lang="stylus">
 	.dblist-wrapper
 		.header-wrapper
-			position: fixed
-			top: 0
-			left: 0
-			width: 100%
-			height: 46px
-			z-index: 999
+			position fixed
+			top 0
+			left 0
+			width 100%
+			height 46px
+			z-index 999
 		.list-content-wrapper
-			position: fixed
-			width: 100%
-			top: 46px
-			bottom: 0
+			position fixed 
+			width 100%
+			top 46px
+			bottom 0
 			.scrolllist
-				height: 100%
-      	overflow: hidden
+				height 100%
+				overflow hidden
 				width 100%
 		.filter-wrapper
 			border-radius 5px

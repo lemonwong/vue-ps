@@ -1,6 +1,9 @@
 <template>
 	<div id="app">
-		<router-view/>
+		<keep-alive>
+      <router-view v-if="$route.meta.keepAlive" />
+    </keep-alive>
+    <router-view v-if="!$route.meta.keepAlive" />
 	</div>
 </template>
 
@@ -11,5 +14,10 @@
 </script>
 
 <style>
-
+	.van-dialog__message--withtitle{
+		color:#000;
+	}
+	.van-dialog__message{
+		color:#000;
+	}
 </style>

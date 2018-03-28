@@ -73,3 +73,9 @@ export default create({
   }
 });
 </script>
+
+<style>
+/* .van-cell__value{
+  text-align:left !important
+} */
+</style>

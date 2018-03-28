@@ -1,7 +1,10 @@
 <template>
 	<div class="card-wrapper" @click="select">
 		<div>
-			<div class="title-wrapper">{{title}}</div>
+			<div class="title-wrapper" v-if='title'>
+				<span class="title">{{title}}</span>
+				<slot name='title-right' class="title-right"></slot>
+			</div>
 			<div class="content-wrapper">
 				<slot name="content"></slot>
 			</div>
@@ -46,20 +49,29 @@
 	@import '../../common/stylus/variable'
 
 	.card-wrapper
+		position relative
 		margin: 10px 8px 10px 8px
 		min-height: 100px
 		border-radius: 5px
 		background-color: #fff
 		// box-shadow: 2px 2px 1px #888888
 		.title-wrapper
+			display inline-flex
+			width 100%
 			padding-top: 8px
-			padding-bottom: 8px
-			margin-left: 8px
-			margin-right: 8px
+			padding-bottom: 8px			
 			border-bottom: 1px solid #ccc
-			font-size: $font-size-title
+			font-size: $font-size-medium-x
 			font-weight: bold
 			color: #000
+			.title
+				flex 1
+				padding-left: 20px
+				padding-right: 8px
+				font-weight: bold
+			.title-right
+				flex 0 0 40px
+				padding-right 15px
 		.content-wrapper
 			margin-left: 16px
 			margin-right: 8px

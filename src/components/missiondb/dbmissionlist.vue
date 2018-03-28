@@ -147,7 +147,6 @@
 			},
 			chooseType(item) {
 				let ywid = item.单据编号
-				console.log(ywid)
 				this.curType = ywid
 				this.filterFlag = false
 			},

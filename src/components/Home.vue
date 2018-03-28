@@ -13,6 +13,9 @@
     <router-link :to="{path:'/checkin'}">
       <div class="item">CheckIN</div>
     </router-link>
+    <router-link :to="{path:'/customers'}">
+      <div class="item">customers</div>
+    </router-link>
     <x-button></x-button>
     <van-cell-group>
       <van-cell title="单元格" icon="" label=""/>
@@ -39,13 +42,13 @@
     },
   	methods: {
   		btnClicked() {
-        this.$toast.success('提交成功')
-      //   Dialog.alert({
-      //   title: '标题',
-      //   message: '弹窗内容'
-      // }).then(() => {
-      //   // on close
-      // });
+        // this.$toast.success('提交成功')
+        this.$dialog.alert({
+        title: '标题',
+        message: '弹窗内容'
+      }).then(() => {
+        // on close
+      });
       }
   	},
     mounted() {
